@@ -1,0 +1,35 @@
+#container {
+    height: fit-content;
+    width: 80%;
+    font-family: 'Schoolbell', cursive;
+    text-align: center;
+    margin-top: 280px;
+    margin-left: 100px;
+    margin-right:90px;
+    margin-bottom: 90px;
+    border-radius: 20px;
+    padding: 20px;
+    color: rgb(63, 63, 63);
+    background-color: rgba(252, 188, 49, 0.37);
+
+}
+#header{
+    color:#FC3065;
+    font-size: 52px;
+    font-weight: bolder;
+}
+body{
+    color: #efc834;
+    font-family: 'Kaushan Script', cursive;
+    background-image: url(../images/background5.jpg);
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;     
+  
+}
+
+.btn {
+    background-color: #efc834;
+    color: rebeccapurple;
+
+}
