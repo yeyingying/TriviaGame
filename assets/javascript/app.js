@@ -111,12 +111,23 @@ $("#startButton").on("click", function() {
         timer = setInterval(play.countdown, 1000);
         $("#subWrapper").prepend("<h2>Time Remaining: <span id='counter'>90</span> Seconds</h2>");
           $("#startButton").remove();
-      for (var i=0; i < questions.length; i++) {
+      for (var i=0; i < questions.length; i++)
+     {
+      $("#subWrapper").append("<h3>"+questions[i].question+"</h3>");
+      for (var j=0; j < questions[i].answers.length; j++) {
+       var answer = questions[i].answers[j];
+        $("#subWrapper").append("<input type='radio' name='question-"+i+"' value='" +answer + "'>"+questions[i].answers[j]);
+    }
+};
+      /* {
         $("#subWrapper").append("<h3>"+questions[i].question+"</h3>");
-          for (var j=0; j < questions[i].answers.length; j++) {
+          for (var j=0; j < questions[i].answers.length; j++) 
+          {
             $("#subWrapper").append("<input type='radio' name='question-"+i+"' value='+questions[i].answers[j]+'>"+questions[i].answers[j]);
         }
-       }
+       }*/
+
+
        $("#subWrapper").append("<br><br><button class='btn btn-warning' id='submit'>SUBMIT</button>");
       }, 
       done: function() {
