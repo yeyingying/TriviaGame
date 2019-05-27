@@ -98,7 +98,7 @@ $("#startButton").on("click", function() {
     var play = {
       correct: 0,
       incorrect: 0,
-      counter: 90,
+      counter: 120,
       countdown: function() {
         play.counter--;
         $("#counter").html(play.counter);
@@ -109,10 +109,11 @@ $("#startButton").on("click", function() {
       },
       start: function() {
         timer = setInterval(play.countdown, 1000);
-        $("#subWrapper").prepend("<h2>Time Remaining: <span id='counter'>90</span> Seconds</h2>");
+        $("#subWrapper").prepend("<h2>Time Remaining: <span id='counter'>120</span> Seconds</h2>");
           $("#startButton").remove();
       for (var i=0; i < questions.length; i++)
-     {
+     
+      {
       $("#subWrapper").append("<h3>"+questions[i].question+"</h3>");
       for (var j=0; j < questions[i].answers.length; j++) {
        var answer = questions[i].answers[j];
@@ -129,6 +130,8 @@ $("#startButton").on("click", function() {
 
 
        $("#subWrapper").append("<br><br><button class='btn btn-warning' id='submit'>SUBMIT</button>");
+       $("#subWrapper").hide();
+       $("#subWrapper").slideDown(3000);
       }, 
       done: function() {
         $.each($("input[name='question-0']:checked"), function(){
