@@ -27,7 +27,9 @@ body{
     background-position: center center;     
   
 }
-
+#content1{
+    padding: 5px;
+}
 .btn {
     background-color: #efc834;
 
