@@ -113,8 +113,9 @@ var questions = [{
         $("#startButton").remove();
     for (var i=0; i < questions.length; i++)
    
+
     {
-    $("#content1").append("<h3>"+questions[i].question+"</h3>");
+    $("#content1").append("<h3>"+"<br>"+questions[i].question+"</h3>");
     for (var j=0; j < questions[i].answers.length; j++) {
      var answer = questions[i].answers[j];
       $("#content1").append("<input type='radio' name='question-"+i+"' value='" +answer + "'>"+questions[i].answers[j]);
